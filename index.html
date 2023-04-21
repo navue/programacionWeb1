@@ -109,23 +109,15 @@
             <form action="#presentacion" id="contacto">
                 <fieldset>
                     <legend>Nuevo Mensaje</legend>
-                    <p><label>Nombre: <input type="text" name="nombre"/></label></p>
-                    <p><label>Dirección de correo: <input type="email" name="correo" /></label></p>
-                    <p><label>Tu mensaje:<br><textarea name="mensaje"></textarea></label></p>
-                </fieldset>
-                <fieldset>
-                    <legend>Nuevos temas</legend>
-                    <p>¿Qué temas te gustaría que trate más en mi sitio?<br>
-                        <label><input type="checkbox" name="html"> HTML</label>
-                        <label><input type="checkbox" name="graficos"> Gráficos</label>
-                        <label><input type="checkbox" name="videojuegos"> Videojuegos</label>
-                        <label><input type="checkbox" name="arte"> Arte</label>
-                        <label><input type="checkbox" name="musica"> Música</label>
-                    </p>
+                    <div style="display: flex;">
+                        <p style="margin-right: 10px;"><label>Nombre: <input type="text" name="nombre" style="width: 200px;" required placeholder="Este campo es OBLIGATORIO"/></label></p>
+                        <p><label>Email: <input type="email" name="correo" style="width: 200px;" required placeholder="Debe ser un email VÁLIDO"/></label></p>
+                    </div>
+                    <p><label>Mensaje:<br><textarea name="mensaje" cols="50" rows="5" maxlength="250" style="resize: none;"></textarea></label></p>
                 </fieldset>
                 <p>
                     <input type="submit" value="Enviar mensaje">
-                    <input type="reset" value="Comenzar de nuevo">
+                    <input type="reset" value="Reestablecer">
                 </p>
             </form>
         </div>

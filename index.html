@@ -81,22 +81,22 @@
             <h3>Conocimientos y aptitudes</h3>
             <table summary="Conocimientos" style="table-layout: fixed; width: 100%; border-collapse: collapse; border: 1px solid; text-align: center;">
                 <caption style="margin-bottom: 10px;">Conocimientos</caption>
-                <tr>
+                <tr style="background-color: rgba(0, 0, 255, 0.5);">
                     <th style="border-collapse: collapse; border: 1px solid;">Idiomas</th> 
                     <th style="border-collapse: collapse; border: 1px solid;">Desarrollo</th>
                     <th style="border-collapse: collapse; border: 1px solid;">Gestion</th>
                 </tr>
-                <tr>
+                <tr style="background-color: rgba(127, 255, 212, 0.5);">
                     <td style="border-collapse: collapse; border-right: 1px solid;">Ingles (Básico)</td>
                     <td style="border-collapse: collapse; border-right: 1px solid;">NET Core</td>
                     <td style="border-collapse: collapse; border-right: 1px solid;">Metodologías ágiles (Scrum)</td>
                 </tr>
-                <tr>
+                <tr style="background-color: rgba(127, 255, 212, 0.5);">
                     <td style="border-collapse: collapse; border-right: 1px solid;"></td>
                     <td style="border-collapse: collapse; border-right: 1px solid;">Java</td>
                     <td style="border-collapse: collapse; border-right: 1px solid;">GitHub</td>
                 </tr>
-                <tr>
+                <tr style="background-color: rgba(127, 255, 212, 0.5);">
                     <td style="border-collapse: collapse; border-right: 1px solid;"></td>
                     <td style="border-collapse: collapse; border-right: 1px solid;">C#</td>
                     <td style="border-collapse: collapse; border-right: 1px solid;"></td>
@@ -119,14 +119,14 @@
             <p style="font-family: Arial, Helvetica, sans-serif; font-size: small;">
                 <img src="img/cumpleaños.png" alt="Foto cumpleaños" width="18" height="18" style="float:left;"/>&nbsp;Fecha de nacimiento<br>&nbsp;<strong>12 de septiembre de 1991</strong>
             </p>
-            <form action="#presentacion" id="contacto">
-                <fieldset>
-                    <legend>Nuevo Mensaje</legend>
+            <form action="#presentacion" id="contacto" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                <fieldset style="background-image:url('img/mensaje.jpg');">
+                    <legend><strong>Nuevo Mensaje</strong></legend>
                     <div style="display: flex;">
-                        <p style="margin-right: 10px;"><label>Nombre: <input type="text" name="nombre" style="width: 200px;" required placeholder="Este campo es OBLIGATORIO"/></label></p>
-                        <p><label>Email: <input type="email" name="correo" style="width: 200px;" required placeholder="Debe ser un email VÁLIDO"/></label></p>
+                        <p style="margin-right: 10px;"><label><strong>Nombre: </strong><input type="text" name="nombre" style="width: 200px;" required placeholder="Este campo es OBLIGATORIO"/></label></p>
+                        <p><label><strong>Email: </strong><input type="email" name="correo" style="width: 200px;" required placeholder="Debe ser un email VÁLIDO"/></label></p>
                     </div>
-                    <p><label>Mensaje:<br><textarea name="mensaje" cols="50" rows="5" maxlength="250" style="resize: none;"></textarea></label></p>
+                    <p><label><strong>Mensaje: </strong><br><textarea name="mensaje" cols="50" rows="5" maxlength="250" style="resize: none;"></textarea></label></p>
                 </fieldset>
                 <p>
                     <input type="submit" value="Enviar mensaje">

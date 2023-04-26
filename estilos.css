@@ -2,6 +2,9 @@
 body{
     max-width: 720px; 
     margin: auto;
+    background-image: url('img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a{

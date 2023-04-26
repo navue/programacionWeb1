@@ -1,15 +1,38 @@
+/*Selectores por etiqueta*/
 body{
     max-width: 720px; 
     margin: auto;
 }
 
+a{
+    text-decoration:none;
+}
+
+table, th{
+    table-layout: fixed; 
+    width: 100%; 
+    border-collapse: collapse;
+    text-align: center; 
+    border: 1px solid; 
+}
+
+table caption {
+    margin-bottom: 10px;
+}
+
+input{
+    width: 200px;
+}
+
+textarea{
+    resize: none;
+}
+
+/*Selectores por Id*/
+
 #presentacion{
     background-image:url('img/portada.jpg'); 
     background-repeat: no-repeat;
-}
-
-a{
-    text-decoration:none;
 }
 
 #foto{
@@ -17,49 +40,21 @@ a{
     margin-left: 12px;
 }
 
-#acercaDe p{
+#descripcion{
     text-align: justify;
 }
 
-.logos{
-    float:left;
+#campoNombre{
+    margin-right: 10px;
 }
 
-.textoLogos{
-    margin-left: 60px;
-}
-
-#certificacion{
+#licenciasYCertificaciones a{
     display: flex; 
     justify-content: center
 }
 
-#textoCertificacion{
+#licenciasYCertificaciones figcaption{
     text-align: center;
-}
-
-table{
-    table-layout: fixed; 
-    width: 100%; 
-    border-collapse: collapse; 
-    border: 1px solid; 
-    text-align: center;
-}
-
-table caption {
-    margin-bottom: 10px;
-}
-
-.cabecera{
-    background-color: rgba(0, 0, 255, 0.5);
-    border-collapse: collapse; 
-    border: 1px solid;
-}
-
-.contenido{
-    background-color: rgba(127, 255, 212, 0.5);
-    border-collapse: collapse; 
-    border-right: 1px solid;
 }
 
 #informacionDeContacto p{
@@ -71,11 +66,8 @@ table caption {
     float:left;
 }
 
-#contacto{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 #contacto fieldset{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image:url('img/mensaje.jpg');
 }
 
@@ -83,14 +75,21 @@ table caption {
     display: flex;
 }
 
-#campoNombre{
-    margin-right: 10px;
+/*Selectores por clase*/
+
+.logos{
+    float:left;
 }
 
-input{
-    width: 200px;
+.textoLogos{
+    margin-left: 60px;
 }
 
-textarea{
-    resize: none;
+.cabecera{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.contenido{
+    background-color: rgba(127, 255, 212, 0.5);
+    border-right: 1px solid;
 }

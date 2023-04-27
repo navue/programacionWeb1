@@ -162,15 +162,27 @@
                     <div>
                         <p id="campoNombre">
                             <label>
-                                <strong>Nombre: </strong>
+                                <strong>Nombre: <span class="requerido">*</span></strong>
                                 <input type="text" name="nombre" required placeholder="Este campo es OBLIGATORIO"/>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <strong>Email: </strong>
+                                <strong>Email: <span class="requerido">*</span></strong>
                                 <input type="email" name="correo" required placeholder="Debe ser un email VÁLIDO"/>
                             </label>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label>
+                                <strong>Asunto:</strong>
+                            </label>
+                            <select id="asunto" name="asunto">
+                                <option value="asunto1">Propuesta laboral</option>
+                                <option value="asunto2">Oferta académica</option>
+                                <option value="asunto3">Otros</option>
+                            </select>
                         </p>
                     </div>
                     <p>

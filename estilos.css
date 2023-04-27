@@ -102,3 +102,9 @@ textarea{
     background-color: rgba(127, 255, 212, 0.5);
     border-right: 1px solid;
 }
+
+.requerido {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #C00;
+}

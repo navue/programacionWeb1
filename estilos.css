@@ -34,8 +34,7 @@ textarea{
 /*Selectores por Id*/
 
 #presentacion{
-    background-image:url('img/portada.jpg'); 
-    background-repeat: no-repeat;
+    background:url('img/portada.jpg') no-repeat;
 }
 
 #foto{

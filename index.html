@@ -5,6 +5,7 @@
     <meta name="description" content="Este proyecto es un un Curriculum Vitae para la materia Programación Web 1"/>
     <meta name="author" content="Nicolás Agnessi Vuelta"/>
     <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="estilos.css"/>
 </head>
 <body>
@@ -154,48 +155,46 @@
                 <img src="img/cumpleaños.png" alt="Foto cumpleaños"/>&nbsp;Fecha de nacimiento<br>&nbsp;
                 <strong>12 de septiembre de 1991</strong>
             </p>
-            <form action="#" id="contacto">
-                <fieldset>
-                    <legend>
-                        <strong>Nuevo Mensaje</strong>
-                    </legend>
-                    <div>
-                        <p id="campoNombre">
-                            <label>
-                                <strong>Nombre: <span class="requerido">*</span></strong>
-                                <input type="text" name="nombre" required placeholder="Este campo es OBLIGATORIO"/>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <strong>Email: <span class="requerido">*</span></strong>
-                                <input type="email" name="correo" required placeholder="Este campo es OBLIGATORIO"/>
-                            </label>
-                        </p>
+            <form id="contacto">
+                <div class="form-group mb-3">
+                    <label>Apellido</label>
+                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                </div>
+                <div class="form-group mb-3">
+                    <label>Nombre</label>
+                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                </div>
+                <div class="form-group mb-3">
+                    <label>Email</label>
+                    <input type="email" class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                </div>
+                <div class="form-group mb-3">
+                    <label>Modalidad</label>
+                    <select class="form-control">
+                        <option selected>Seleccione una opción...</option>
+                        <option>Remoto</option>
+                        <option>Presencial</option>
+                        <option>Híbrido</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Sueldo Mínimo</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
                     </div>
-                    <div>
-                        <p>
-                            <label>
-                                <strong>Asunto:</strong>
-                            </label>
-                            <select name="asunto">
-                                <option value="asunto1">Propuesta laboral</option>
-                                <option value="asunto2">Oferta académica</option>
-                                <option value="asunto3">Otros</option>
-                            </select>
-                        </p>
-                    </div>
-                    <p>
-                        <label>
-                            <strong>Mensaje: </strong><br>
-                            <textarea name="mensaje" cols="50" rows="5" maxlength="250"></textarea>
-                        </label>
-                    </p>
-                </fieldset>
-                <p>
-                    <input type="submit" value="Enviar mensaje">
-                    <input type="reset" value="Reestablecer">
-                </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Mensaje</label>
+                    <textarea class="form-control" rows="3" required placeholder="Este campo es OBLIGATORIO"></textarea>
+                </div>
+                <button class="btn btn-success">Enviar</button>
+                <button class="btn btn-danger">Reestablecer</button>
             </form>
             <hr>
         </div>

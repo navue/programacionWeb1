@@ -219,8 +219,8 @@
                             </label>
                             <textarea id="mensaje" class="form-control" rows="3" placeholder="Este campo es OBLIGATORIO"></textarea>
                         </div>
-                        <button id="enviarBtn" class="btn btn-success" data-toggle="modal" data-target="#modalError">Enviar</button>
-                        <button id="reestablecerBtn" class="btn btn-danger">Reestablecer</button>
+                        <button id="enviarBtn" type="button" class="btn btn-success">Enviar</button>
+                        <button id="reestablecerBtn" type="button" class="btn btn-danger">Reestablecer</button>
                     </form>
                 </div>
             </div>
@@ -235,6 +235,22 @@
             </blockquote>
         </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.0-dist\js\bootstrap.min.js"></script>
     <script src="codigo.js"></script>
 </body>
 </html>

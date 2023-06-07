@@ -152,47 +152,78 @@
                 <img src="img/cumpleaños.png" alt="Foto cumpleaños"/>&nbsp;Fecha de nacimiento<br>&nbsp;
                 <strong>12 de septiembre de 1991</strong>
             </p>
-            <form id="contacto">
-                <div class="form-group mb-3">
-                    <label>Apellido</label>
-                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+            <div class="card border-primary mb-3" style="max-width: 50rem; background-image:url('img/formulario.jpg');">
+                <div class="card-header">
+                    <strong>Propuesta Laboral</strong>
                 </div>
-                <div class="form-group mb-3">
-                    <label>Nombre</label>
-                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
-                </div>
-                <div class="form-group mb-3">
-                    <label>Email</label>
-                    <input type="email" class="form-control" required placeholder="Este campo es OBLIGATORIO">
-                </div>
-                <div class="form-group mb-3">
-                    <label>Modalidad</label>
-                    <select class="form-control">
-                        <option selected>Seleccione una opción...</option>
-                        <option>Remoto</option>
-                        <option>Presencial</option>
-                        <option>Híbrido</option>
-                    </select>
-                </div>
-                <div class="form-group mb-3">
-                    <label>Sueldo Mínimo</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">$</span>
+                <div class="card-body text-primary">
+                    <form id="contacto">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group mb-3">
+                                    <label>
+                                        <strong>Apellido</strong>
+                                    </label>
+                                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group mb-3">
+                                    <label>
+                                        <strong>Nombre</strong>
+                                    </label>
+                                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                                </div>
+                            </div>
                         </div>
-                        <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
-                        <div class="input-group-append">
-                            <span class="input-group-text">.00</span>
+                        <div class="form-group mb-3">
+                            <label>
+                                <strong>Email</strong>
+                            </label>
+                            <input type="email" class="form-control" required placeholder="Este campo es OBLIGATORIO">
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group mb-3">
+                                    <label>
+                                        <strong>Modalidad</strong>
+                                    </label>
+                                    <select class="form-control">
+                                        <option selected>Seleccione una opción...</option>
+                                        <option>Remoto</option>
+                                        <option>Presencial</option>
+                                        <option>Híbrido</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group mb-3">
+                                    <label>
+                                        <strong>Sueldo Mínimo</strong>
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>
+                                <strong>Mensaje</strong>
+                            </label>
+                            <textarea class="form-control" rows="3" required placeholder="Este campo es OBLIGATORIO"></textarea>
+                        </div>
+                        <button class="btn btn-success">Enviar</button>
+                        <button class="btn btn-danger">Reestablecer</button>
+                    </form>
                 </div>
-                <div class="form-group mb-3">
-                    <label>Mensaje</label>
-                    <textarea class="form-control" rows="3" required placeholder="Este campo es OBLIGATORIO"></textarea>
-                </div>
-                <button class="btn btn-success">Enviar</button>
-                <button class="btn btn-danger">Reestablecer</button>
-            </form>
+            </div>
             <hr>
         </div>
     </section>

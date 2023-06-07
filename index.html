@@ -164,7 +164,7 @@
                                     <label>
                                         <strong>Apellido</strong>
                                     </label>
-                                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                                    <input id="apellido" class="form-control" placeholder="Este campo es OBLIGATORIO">
                                 </div>
                             </div>
                             <div class="col">
@@ -172,7 +172,7 @@
                                     <label>
                                         <strong>Nombre</strong>
                                     </label>
-                                    <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                                    <input id="nombre" class="form-control" placeholder="Este campo es OBLIGATORIO">
                                 </div>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                             <label>
                                 <strong>Email</strong>
                             </label>
-                            <input type="email" class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                            <input id="email" class="form-control" placeholder="Este campo es OBLIGATORIO">
                         </div>
                         <div class="row">
                             <div class="col">
@@ -188,7 +188,7 @@
                                     <label>
                                         <strong>Modalidad</strong>
                                     </label>
-                                    <select class="form-control">
+                                    <select id="modalidad" class="form-control">
                                         <option selected>Seleccione una opción...</option>
                                         <option>Remoto</option>
                                         <option>Presencial</option>
@@ -205,7 +205,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">$</span>
                                         </div>
-                                        <input class="form-control" required placeholder="Este campo es OBLIGATORIO">
+                                        <input id="sueldoMinimo" class="form-control" placeholder="Este campo es OBLIGATORIO">
                                         <div class="input-group-append">
                                             <span class="input-group-text">.00</span>
                                         </div>
@@ -217,10 +217,10 @@
                             <label>
                                 <strong>Mensaje</strong>
                             </label>
-                            <textarea class="form-control" rows="3" required placeholder="Este campo es OBLIGATORIO"></textarea>
+                            <textarea id="mensaje" class="form-control" rows="3" placeholder="Este campo es OBLIGATORIO"></textarea>
                         </div>
-                        <button class="btn btn-success">Enviar</button>
-                        <button class="btn btn-danger">Reestablecer</button>
+                        <button id="enviarBtn" class="btn btn-success" data-toggle="modal" data-target="#modalError">Enviar</button>
+                        <button id="reestablecerBtn" class="btn btn-danger">Reestablecer</button>
                     </form>
                 </div>
             </div>
@@ -235,5 +235,6 @@
             </blockquote>
         </div>
     </footer>
+    <script src="codigo.js"></script>
 </body>
 </html>

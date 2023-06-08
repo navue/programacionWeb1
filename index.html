@@ -71,17 +71,17 @@
         <!-- División "Educación" -->
         <div>
             <h3>Educación</h3>
-            <img class="logos" src="img/educacion.jpg" alt="Foto Educación 1"/>
+            <img class="logos" src="img/educacion.png" alt="Foto Educación 1"/>
             <p class="textoLogos">
                 <strong>Universidad Nacional del Oeste</strong><br>Tecnicatura, Tecnologías Web · En Curso<br>
                 <em>feb. 2023 - actualidad · 3 meses</em>
             </p>
-            <img class="logos" src="img/educacion.jpg" alt="Foto Educación 2"/>
+            <img class="logos" src="img/educacion.png" alt="Foto Educación 2"/>
             <p class="textoLogos">
                 <strong>Universidad Nacional del Oeste</strong><br>Tecnicatura, Informática · En Curso<br>
                 <em>abr. 2021 - actualidad · 2 años</em>
             </p>
-            <img class="logos" src="img/educacion.jpg" alt="Foto Educación 3"/>
+            <img class="logos" src="img/educacion.png" alt="Foto Educación 3"/>
             <p class="textoLogos">
                 <strong>Universidad Nacional del Oeste</strong><br>Diplomatura, Informática · Completo<br>
                 <em>feb. 2018 - feb. 2021 · 3 años</em>
@@ -107,7 +107,7 @@
         <!-- División "Conocimientos y aptitudes" -->
         <div>
             <h3>Conocimientos y aptitudes</h3>
-            <table summary="Conocimientos">
+            <table id="conocimientosYAptitudes" summary="Conocimientos">
                 <tr>
                     <th class="cabecera">Idiomas</th> 
                     <th class="cabecera">Desarrollo</th>
@@ -226,6 +226,24 @@
             </div>
             <hr>
         </div>
+        <!-- División "Información del Formulario" -->
+        <h3>Información del Formulario</h3>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Apellido</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Modalidad</th>
+                <th scope="col">Sueldo Mínimo</th>
+                <th scope="col">Mensaje</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+            </tbody>
+          </table>
+          <button id="ordenarBtn" type="button" class="btn btn-primary">Ordenar por Apellido</button>
+          <hr>
     </section>
     <footer>
         <!-- División "Citas" -->
@@ -235,7 +253,7 @@
             </blockquote>
         </div>
     </footer>
-    <!-- Modal -->
+    <!-- División Modal -->
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

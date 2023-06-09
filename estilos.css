@@ -1,7 +1,5 @@
 /*Selectores por etiqueta*/
 body{
-    max-width: 720px; 
-    margin: auto;
     background-image: url('img/fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,6 +59,11 @@ table caption {
 }
 
 /*Selectores por clase*/
+
+.centrado{
+    max-width: 720px; 
+    margin: auto;
+}
 
 .logos{
     float:left;

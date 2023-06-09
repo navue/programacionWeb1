@@ -5,7 +5,7 @@ const dolar = 243.54
 const euro = 260.77
 
 var enviarBtn = document.querySelector("#enviarBtn")
-var reestablecerButton = document.querySelector("#reestablecerBtn")
+var reestablecerBtn = document.querySelector("#reestablecerBtn")
 var ordenarBtn = document.querySelector("#ordenarBtn")
 var modal = new bootstrap.Modal(document.querySelector('#modal'))
 var tituloModal = document.querySelector('.modal-title')
@@ -14,7 +14,7 @@ var form = document.querySelector("#contacto")
 var cuerpoTabla = document.querySelector("#cuerpoTabla")
 var tabla = document.querySelector('.table-striped')
 var contenidoTabla = []
-var apellido, nombre, email, modalidad, sueldoMinimo, mensaje, filaTabla, celdaTabla, sueldoMinimoDolar, sueldoMinimoEuro, campos
+var apellido, nombre, email, modalidad, sueldoMinimo, mensaje, filaTabla, celdaTabla, sueldoMinimoDolar, sueldoMinimoEuro, campos, ordenarAscDescBtn, ordenarCampoBtn
 
 validacion = () => {
     //Se seleccionan los elementos del DOM (Campos del Formulario).
@@ -70,7 +70,7 @@ validacion = () => {
                             Se calculan y guardan los equivalentes a dolares y euros de sueldoMinimo. 
                             Se asignan a las variables los valores de los elementos (para facilitar el manejo del array campos).
                             Se carga en contenidoTabla los elementos del array campos.
-                            Se ejecuta la función cargarTabla().
+                            Se ordena el array contenidoTabla alfabeticamente por el campo Apellido automaticamente.
                             Se ejecuta la función limpiarFormulario().*/
                             tituloModal.textContent = "Enviado!"
                             cuerpoModal.textContent = "Muchas gracias, su mensaje ha sido enviado con ÉXITO!"
@@ -84,7 +84,7 @@ validacion = () => {
                             mensaje = mensaje.value
                             campos = [apellido, nombre, email, modalidad, sueldoMinimo, mensaje]
                             contenidoTabla.push(campos)
-                            cargarTabla()
+                            ordenarTabla()
                             limpiarFormulario()
                         }
                     }
@@ -116,14 +116,49 @@ cargarTabla = () => {
     }
     //Se inserta el nuevo elementos "tbody" dentro del elemento "table"
     tabla.appendChild(cuerpoTabla)
-
 }
 
 ordenarTabla = () => {
-    /*Se ordena el array contenidoTabla alfabeticamente por el campo Apellido.
-    Se ejecuta la función cargarTabla.*/
-    contenidoTabla.sort()
+    ordenarCampoBtn = document.querySelector("#ordenarCampoBtn")
+    switch (ordenarCampoBtn.value) {
+        case "Ordenar por Apellido":
+            contenidoTabla.sort(ordenarPorCampo(0))
+            break
+        case "Ordenar por Modalidad":
+            contenidoTabla.sort(ordenarPorCampo(3))
+            break
+        case "Ordenar por Sueldo Mínimo":
+            contenidoTabla.sort(ordenarPorCampo(4))
+            break
+        default:
+            contenidoTabla.sort(ordenarPorCampo(0))
+            break
+    }
     cargarTabla()
+}
+
+ordenarPorCampo = (indiceElemento) => {
+    ordenarAscDescBtn = document.querySelector("#ordenarAscDescBtn")
+    return function(a, b) {
+        var elementoA
+        var elementoB
+        if (indiceElemento === 4){
+            elementoA = parseInt(a[indiceElemento].slice(1))
+            elementoB = parseInt(b[indiceElemento].slice(1))
+        } else {
+            elementoA = a[indiceElemento]
+            elementoB = b[indiceElemento]
+        }
+        if (ordenarAscDescBtn.value === "Orden Descendente") {
+            if (elementoA < elementoB) return 1
+            else if (elementoA > elementoB) return -1
+            else return 0
+        } else if (ordenarAscDescBtn.value === "Orden Ascendente") {
+            if (elementoA < elementoB) return -1
+            else if (elementoA > elementoB) return 1
+            else return 0
+        }
+    }
 }
 
 limpiarFormulario = () => {
@@ -131,5 +166,5 @@ limpiarFormulario = () => {
 }
 
 enviarBtn.addEventListener("click", validacion)
-reestablecerButton.addEventListener("click", limpiarFormulario)
+reestablecerBtn.addEventListener("click", limpiarFormulario)
 ordenarBtn.addEventListener("click", ordenarTabla)

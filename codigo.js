@@ -120,6 +120,7 @@ cargarTabla = () => {
 
 ordenarTabla = () => {
     ordenarCampoBtn = document.querySelector("#ordenarCampoBtn")
+    //Se ordena el array "contenidoTabla" según el campo seleccionado en el formulario
     switch (ordenarCampoBtn.value) {
         case "Ordenar por Apellido":
             contenidoTabla.sort(ordenarPorCampo(0))
@@ -134,6 +135,7 @@ ordenarTabla = () => {
             contenidoTabla.sort(ordenarPorCampo(0))
             break
     }
+    //Se realiza la carga de la tabla
     cargarTabla()
 }
 
@@ -142,6 +144,7 @@ ordenarPorCampo = (indiceElemento) => {
     return function(a, b) {
         var elementoA
         var elementoB
+        //En caso de querer ordenar por "sueldoMinimo" se parsea a Int el contenido despues del "$"
         if (indiceElemento === 4){
             elementoA = parseInt(a[indiceElemento].slice(1))
             elementoB = parseInt(b[indiceElemento].slice(1))
@@ -149,6 +152,7 @@ ordenarPorCampo = (indiceElemento) => {
             elementoA = a[indiceElemento]
             elementoB = b[indiceElemento]
         }
+        //Dependiendo de la selección del formulario, se ordena el array de forma Ascendente o Descendente
         if (ordenarAscDescBtn.value === "Orden Descendente") {
             if (elementoA < elementoB) return 1
             else if (elementoA > elementoB) return -1

@@ -51,13 +51,13 @@ validacion = () => {
                 //Si el valor de "modalidad" no se modificó en el formulario se personaliza el elemento MODAL, sino pasa a la siguiente validación.
                 if (modalidad.value === "Seleccione una opción...") {
                     tituloModal.textContent = "Error!"
-                    cuerpoModal.textContent = "Por favor, seleccione indique la MODALIDAD"
+                    cuerpoModal.textContent = "Por favor, indique la MODALIDAD"
                 } else {
                     //Validación de Sueldo Mínimo numérico superior a $100.000.
                     //Si el valor de "sueldoMínimo" no matchea con la regEx (tener solo dígitos) o es menor a 100000 se personaliza el elemento MODAL, sino pasa a la siguiente validación.
                     if (sueldoMinimo.value.match(regExSueldo) === null || sueldoMinimo.value < 100000) {
                         tituloModal.textContent = "Error!"
-                        cuerpoModal.textContent = "Solo se recibirán propuestan con un sueldo mínimo de $100000"
+                        cuerpoModal.textContent = "Solo se recibirán propuestas con un sueldo mínimo de $100000"
                     } else {
                         //Validación de cantidad de caracteres para el MENSAJE.
                         //Si el valor de "mensaje" tiene menos de 50 o más de 500 caracteres se personaliza el elemento MODAL, sino terminan las validaciones.
